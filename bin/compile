@@ -41,9 +41,14 @@ curl --silent --max-time 60 --location "$PHP_URL" | tar xz
 # Switch to the repo's context.
 cd $BUILD_DIR
 
+function puts-step (){
+  echo "-----> $@"
+}
+
 IM_LOCATION="im"
 
 mkdir -p $IM_LOCATION
+
 
 # Install ImageMagick
 IM_VERSION="6.7.8-8"
